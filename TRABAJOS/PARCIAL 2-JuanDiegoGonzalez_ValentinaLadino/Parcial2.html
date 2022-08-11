@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Foro | interactivo</title>
+   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
+   <style>
+     html
+      {
+	      margin: 0;
+	      padding: 0;
+        color: #aaaaaa;
+	      background-color: #333333;
+	      font: normal 12px "Trebuchet MS", "Lucida Grande", Verdana, Georgia, Sans-Serif;
+      }
+
+       /* Links */
+
+      a:link { text-decoration: none; color: #7799bb; }
+
+      a:visited { text-decoration: none; color: #557799; }
+
+      a:hover, a:active { color: #dd5555; }
+
+      /* FOTOS */
+
+      .foto
+ 		 {
+ 			 padding: 40px; 
+ 		  	margin: 40px;
+         border: 15px solid black;   
+ 			 float: center; 
+ 
+ 	    }
+
+     .foto2
+     {
+       padding: 10px; 
+       margin: 10px;  
+       float: left; 
+       width: 690px;
+     }
+
+     .foto3
+     {
+       padding: 20px; 
+       margin: 20px;  
+       float: left; 
+       width: 190px;
+       height:430px;
+      }
+
+     .foto4
+     {
+       padding: 20px; 
+       margin: 20px; 
+       float: right; 
+       width: 190px;
+       height:430px;
+      }
+
+      /* Diseño Html  */
+
+      
+
+      h1, h2, h3, h4, h5, h6 { font-weight: normal; margin: 0; padding: 10px 0; color: #995555; }
+
+     h1 { font-size: 80px;
+        text-align: center
+      }
+
+      h2 { font-size: 28px; }
+
+      h3 { font-size: 24px; }
+
+      h4 { 
+        text-align: center;
+        font-size: 30px; 
+      }
+
+      h5, h6 { font-size: 18px; }
+
+      ul, ol, dl, blockquote, pre
+      {
+	      color: #999999;
+	      margin: 10px 35px; 
+        padding: 10px 30px; 
+	      line-height: 1.6em;
+	      border: 1px solid #1a1a1a;
+	      border-top: 10px solid #000000;
+	     background: #311616 url(images/navigation_hover.gif) top left repeat;
+      }
+
+      p { margin: 0; }
+
+      ul { list-style-type: square; } 
+
+     dt
+      {
+	      margin: 0;
+	      color: #7799bb;
+	      font-size: 15px; 
+	      font-weight: bold;
+	      padding: 10px 0 2px; 
+	      text-transform: uppercase; 
+      }
+
+      dd { margin: 0; padding: 2px 0 5px; margin-bottom: 5px; border-bottom: 1px dotted #555555; }
+
+      dd.last { border-bottom-width: 0; }
+
+     pre { font-family: Consolas, Verdana, "Courier New"; font-size: 11px; padding: 10px 30px; }
+
+      code { color: #558399; } 
+
+      abbr, acronym { text-decoration: none; border-bottom: 1px dotted #aaaaaa; cursor: help; }
+
+      em { font-style: italic; }
+
+      strong { font-weight: bold; }
+
+      ins { color: #999999; text-decoration: none; padding-left: 20px; background: transparent url(images/information.png) center left no-repeat; }
+
+      del { text-decoration: line-through; } 
+
+      blockquote { text-align: right; }
+
+      blockquote p { text-align: left; }
+
+      blockquote cite { font-style: normal; padding-right: 10px; }
+
+     /* Estructura */
+
+      .jumbotron{
+
+        background-color: #059AEA;
+       color: #FFFFFF  ;
+      }
+
+      .bg-1{
+
+       background-color: #FFFFFF;
+       color: #FFFFFF;
+       }
+
+       .bg-2{
+
+       background-color: #333333;
+       color: #FFFFFF;
+      }
+     
+      section{
+        background-color:#151515;
+        width:99%;
+        height:99%;
+        color:#FFF;
+      }
+
+      section-2{
+       position:relative;
+       float:left;
+       background-color:#151515;
+       width:80%;
+       height:99%;
+       color:#FFF;
+      }
+      article{
+       background-color: #000000(0, 0, 0);
+       width:98%;
+       height:88%;
+       color:#aaaaaa;
+      }
+
+      aside{
+       position:relative;
+       background-color:#151515;
+       width:48%;
+       height:55%;
+       color:#FFF;
+       float:left;
+     }
+
+      footer{
+       position:relative; 
+       background-color:#059AEA;
+        
+       color:#FFF;
+       clear:both;
+      }
+      
+      section,aside,article,header,nav{
+       -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+        border-radius: 10px;
+        margin:1%;
+      }
+
+     body
+      {
+     	 margin: 0;
+	     float: left;
+	     width: 100%; 
+      }
+
+     #header
+      {
+	     float: left; 
+	     width: 100%; 
+       clear: both;
+	     border-top: 10px solid #8f1818;
+     	 background: #222222 url(images/navigation_hover.gif) top left repeat;
+     }
+
+     #navigation
+     {
+	     float: left;
+	     width: 100%; 
+	     clear: both;
+	     color: #333333;
+	     border-bottom: 5px solid #222222;
+	     background: #558399 url(images/navigation_bg.gif) top left repeat; 
+     }
+
+     #wrapper
+      {
+	      clear: both;
+	      float: left;
+	      width: 100%;
+	      margin: 10px 0; 
+	      background: transparent url(images/hr_dotted.gif) 60% 0 repeat-y; 
+      }
+
+      #content-wrapper
+      {
+	     width: 60%;
+	     float: left;
+      }
+
+      #content
+      {
+	      float: left;
+	      padding: 0 1px;
+      }
+
+      #sidebar-wrapper
+      {
+	     width: 40%;
+	     float: right;
+      }
+
+      #sidebar
+      {
+	     float: right;
+	     padding: 0 20px;
+      }
+
+      #footer
+      {
+	     clear: both;
+	     float: left;
+	     width: 100%; 
+	     color: #888888;
+	     text-align: center; 
+	     background-color: #222222;
+	     border-top: 1px solid #000000;
+	     border-bottom: 10px solid #191919;
+      }
+
+
+      /* Header */
+
+      #header h1 { padding: 20px; }
+
+      /* Navegacion */
+
+      #navigation ul { float: left; list-style-type: none; margin: 0; padding: 0; background: none; border-width: 0; }
+
+      #navigation li { float: left; }
+
+      #navigation a
+      {
+	      float: left;
+	      display: block;
+	      padding: 5px 10px; 
+      }
+
+      #navigation a:link,
+      #navigation a:visited
+      {
+	      color: #002244; 
+	      font-weight: bold; 
+	      text-transform: uppercase; 
+      }
+
+      #navigation a:hover,
+      #navigation a:active
+      {
+	      color: #7799bb;
+	     background: #333333 url(images/navigation_hover.gif) top left repeat;
+      }
+
+      li#lhome a:hover,
+      li#lhome a:active
+      {
+	     background-position: 0 -3px; 
+      }
+
+      li#lproducts a:hover,
+      li#lproducts a:active
+      {
+	      background-position: 0 1px; 
+      }
+
+      li#lsolutions a:hover,
+      li#lsolutions a:active
+      {
+	      background-position: 0 2px; 
+      }
+
+     li#lmysterious a:hover,
+     li#lmysterious a:active
+      {
+       	background-position: 0 -1px; 
+      }
+
+      li#labout a:hover,
+      li#labout a:active
+      {
+	      background-position: 0 -2px; 
+      }
+
+      li#lcontact a:hover,
+      li#lcontact a:active
+      {
+	      background-position: 0 -3px; 
+      }
+
+      body#babout li#labout a
+      {
+	      color: #99bbdd;
+	      background: #333333 url(images/navigation_hover.gif) 0 -2px repeat;
+      }
+
+      /* Sidebar */
+
+     #sidebar p
+     {
+	    color: #999999;
+	     margin: 10px 35px; 
+	     padding: 5px 30px; 
+	     line-height: 1.6em;
+	     border: 1px solid #1a1a1a;
+	     border-top: 10px solid #151515;
+	     background: #311616 url(images/navigation_hover.gif) top left repeat;
+      }
+
+      /* Footer */
+
+     #footer p { margin: 15px 0; }
+
+     #footer a:link { color: #888888; font-weight: bold; border-bottom: 1px dotted #888888; } 
+
+     #footer a:visited { color: #666666; font-weight: bold; border-bottom: 1px dotted #666666; }
+
+     #footer a:hover, #footer a:active { color: #999999; border-bottom: 1px solid #999999; }
+
+     /* User Login */
+
+#userlogin_header {
+	border-width: 2px 0px;
+	border-color: #860b09 #000 #860b09;
+	border-style: solid;
+}
+
+#userlogin_header h2 {
+	width: 196px;
+	height: 29px;
+	/*background: url('imagenes/userlogin_header.gif') no-repeat 50% 0%;*/
+}
+
+#userlogin {
+	height: 235px;
+	width: 196px;
+	overflow: hidden;
+}
+
+#userlogin form {
+	margin: 12px 0px 10px;
+	width: 196px;
+	text-align: center;
+}
+
+#userlogin form strong {
+	display: block;
+	width: 70px;
+	height: 24px;
+	margin-bottom: 3px;
+	float: left;
+	clear: left;
+}
+
+#field_username, #field_password {
+	display: block;
+	clear: both;
+}
+
+#button_enter {
+	margin: 0px auto;
+	width: 40px;
+	float: none;
+	clear: both;
+	display: block;
+}
+
+/*#field_username strong {
+	background: url('imagenes/userlogin_login.gif') no-repeat 50% 6px;
+}
+
+#field_password strong {
+	background: url('imagenes/userlogin_password.gif') no-repeat 50% 6px;
+}*/
+
+#userlogin input {
+	margin-right: 2px;
+	margin-bottom: 12px;
+	width: 122px;
+	float: right;
+	clear: right;
+}
+
+#userlogin input.button {
+	margin: 7px 0px;
+	width: 40px;
+	height: 18px;
+	float: none;
+	clear: both;
+}
+
+#userlogin_links {
+	padding: 10px 12px 0px;
+	border-top: #860b09 2px solid;
+}
+
+#userlogin_links a#register {
+	background: url('imagenes/userlogin_register.gif') no-repeat 0px 0px;
+	display: block;
+}
+
+#userlogin_links a#notregister {
+	background: url('imagenes/userlogin_notregister.gif') no-repeat 0px 0px;
+	display: block;
+}
+
+#userlogin_links a strong {
+	width: 170px;
+	height: 20px;
+	display: block;
+	cursor: pointer;
+}
+
+    </style>
+  </head> 
+  <body id="babout"  background="FT9.jpg">
+    <div id="header">
+      <h1>Foro | interactivo</h1>
+    </div>
+    <div id="navigation">
+			<ul>
+			  <li id="lhome"><a href="Parcial2.html">Inicio</a></li>
+			  <li id="lproducts"><a href="https://starwars.fandom.com/es/wiki/Portada%22%3EHistorias">Historias</a></li>
+			  <li id="lsolutions"><a href="sobrenosotros.html">Nosotros</a></li>
+			</ul>
+		  </div><br>
+
+    <!-- Parrafos -->
+    
+    <div id="wrapper">
+    <div id="content-wrapper">
+    <div id="content">
+      <h4><br>¿Qué pasaría si Darth Vader saliera del lado oscuro y volviera a ser parte de la orden jedi?</h4><br>
+     <dl>
+        <dt>Introducción</dt>
+        <img src="DV1.png" alt="imagen" class="foto2">
+        
+       <section>
+         <article>
+           <dd>Sean bienvenidos al foro interactivo, les presentaremos un hilo argumental acerca del mítico Darth Vader,
+              todo esto creado por nuestra autoría y hecho para ustedes, en donde conocerán un interesante hilo argumental
+               basado en What if… o que pasaría si, todo esto con el fin de entretener y promover la imaginación, los giros 
+               drásticos y descabellados que unos simples fans pueden lograr gracias a una de sus sagas favoritas.
+           </dd>
+         </article>
+       </section>
+        
+
+        <dt>Historia</dt>
+        
+        <img src="OBI.png" alt="imagen" class="foto2">
+        
+       <section>
+         <article>
+           <dd>Todos conocemos a Darth Vader, uno de los siths más temidos en el universo de Star wars y el más respetado,
+              pero se han preguntado, ¿Qué hubiera pasado si Vader se iba con la resistencia?<br><br>
+            Pues nosotros proponemos que podía pasar esto:<br><br>
+            Darth Vader recién admitido como Lord Sidious como su aprendiz tiene la tarea de buscar un jedi y matarlo para 
+            tomar el cristal kyber de su sable de luz y terminar su entrenamiento para volverse Lord sith, Vader cumple su 
+            cometido pero cuando esta por corromper el cristal se da cuenta que este tiene vida, este empieza a mostrarle a 
+            Vader su vida pasada como Anakin Skywalker, su tiempo como maestro y a sus compañeros de guerra; además de esto
+             le recuerda a su esposa Padme Amidala y su hijo, al ver estos recuerdos dentro del sith vuelve a surgir un 
+             sentimiento de hacer lo correcto y luchar por sus amigos como cuando era un padawan, motivado por estos recuerdos 
+             decide volver a su refugio y reparar su armadura, en seguida tomaría su nave y volvería a donde su maestro Lord 
+             Sidious para decirle que dejara el camino del lado oscuro de la fuerza y sin más se retiraría de la sala, Sidius 
+             al ver esto decide atacar a Vader con su habilidad de controlar la fuerza pero lo que él no esperaba es que nuestro
+              querido guerrero tomaría su sable de luz y desviaría los rayos que iban directo a él, demostrándole a Sidious que 
+              su determinación a volverse un Jedi es más firme que su poder.<br><br>
+            Vader volvería a Tatuin en busca de su maestro Obi-wan Kenobi a quien le pediría perdón por todos sus actos crueles
+             al momento de la ejecución de la orden 66, Kenobi sorprendido al verlo saca de una vez su sable de luz listo para 
+             la batalla, pero al ver a su ex padawan soltar el sable de luz que estaba en sus manos y arrodillarse ante el 
+             implorándole perdón este lo escucha y con un sentimiento de nostalgia lo abraza como el vínculo de “hermanos” que 
+             tenían, Obi-wan decide devolverle su sable de luz a Vader, este al momento de activarlo ve en su estela azul la
+              esperanza de traer el equilibrio a la fuerza.<br><br>
+            
+           </dd>
+         </article>
+       </section>
+
+        <dt>hilo argumental&ndash;1</dt>
+        <br>
+        <img src="REX.png" alt="imagen" class="foto3" width="1149" height="2808">   
+       <section>
+         <article>
+            <br><br>
+           <dd>Decididos por buscar más jedis para que se unan a ellos nuestros dos jedis deciden partir de Tatuin con destino 
+             a Seelos donde habían escuchado que Rex se encontraba allí, pero antes de salir vemos a Vader con un color distinto
+              en su armadura, un color blanco el cual refleja su meta de traer paz al universo.<br><br>
+            Al llegar a Seelos encontraron un AT-TE activo en la zona donde aterrizaron, al intentar acercarse el caminante 
+            AT-TE y su tripulación empezaron un ataque contra ellos, Vader y Kenobi esquivaron los ataques del caminante y en 
+            un intento de evitar los disparos, Vader con el uso de la fuerza logra desviar uno de los disparos hacia una de las 
+            piernas del caminante haciéndolo caer, al instante nuestros héroes entrar al caminante y se encuentran que este 
+            estaba siendo piloteado por clones y por el comandante Rex, Kenobi al ver a Rex guarda su sable de luz y le da 
+            la mano para ayudarlo.<br><br>
+            <em>-Veo que sobreviviste a la orden 66 amigo mío- le dice Kenobi</em><br> 
+            <em>-General Kenobi está vivo, pensé ... pensé que había muerto</em><br>
+            <em>-Bueno ya me conoces Rex soy difícil de derrotar, además traigo un viejo amigo</em><br>
+            <em>De las sombras sale Vader extendiendo su mano.</em><br>
+            <em>-Es bueno verte Rex cuanto a pasado</em><br>
+            <em>Rex al verlo decide arremeter contra él y amenazarlo de muerte, Kenobi aparta a Rex de Vader y le explica que él está de su lado, Rex vuelve la mirada a Vader.</em><br>
+            <em>-Entonces ¿es usted general Skywalker?</em><br>
+            <em>-No Rex, sigo siendo Darth Vader, tratare de restaurar todo el caos que hizo Anakin Skywalker</em><br>
+            <em>Estando juntos, Rex les presenta a la tripulación, Kenobi y Vader les comentan a los clones el plan que tienen para vencer al emperador.</em><br>
+            <em>-¿No creen que es muy arriesgado para un grupo de solo 5 personas? -dice uno de los clones</em><br>
+            <em>-Sí, si tan solo tuviéramos otro maestro a nuestro lado sería un poco más fácil- responde Obiwan </em><br>
+            <em>-Conozco a un viejo aliado, está en mandalor- Responde Rex.   </em><br>         
+             <br><br>
+           </dd>
+         </article>
+       </section>
+
+        <dt>hilo argumental&ndash;2</dt>
+        <br>
+        <img src="AH.png" alt="imagen" class="foto4"width="860" height="1690">
+        
+       <section>
+         <article>
+          <br><br>
+           <dd> Decididos parten los 5 a mandalor, en el camino Vader trabaja en variantes para su armadura, que le 
+             permitan cambiar su casco dependiendo de la situación a la que se vayan a enfrentar y una variante que le 
+             permita quitarse el casco y no le impida respirar sin este.<br><br>
+            Cuando llegan a Mandalor Vader y Obi-wan perciben una presencia conocida, deciden ir los dos a buscar a esa 
+            persona, guiados por las señales de fuerza hasta llegar al salón principal del castillo de mandalor, al entrar 
+            se encuentra con Ahsoka Tano, ella al voltear y verlos se encuentra sorprendida y sin palabras.<br><br>
+            <em>-Ahsoka, ¿cómo estás? - dice Vader</em><br>
+            Ahsoca se acerca a él y le da un abrazo<br>
+            <em>-Es bueno tenerte de vuelva maestro, no sabes la falta que hacías</em> <br>
+            Vader la abraza<br>
+            <em>-Es bueno estar devuelta </em><br>
+            Terminados los saludos le explican a Ahsoka el plan que tienen, ella acepta y les dice que en la ausencia de
+             ellos dos logro hacerse con un pequeño grupo de lucha de la resistencia de Mandalor, ella les dice que pueden
+              ir con un pequeño grupo de estos para acabar con Sidius y así acabar de una vez por todas el caos del universo.<br><br>             
+             <br><br>
+            </dd>
+         </article>
+       </section>
+     </dl>
+     <div class="bg-2 text-center ">
+     </div>
+   </div>
+   </div>
+   <br><br><br><br><br><br><br>
+   <div id="sidebar-wrapper ">
+     <div id="sidebar">
+       <section-2>&nbsp;&nbsp;&nbsp;
+          <ul>
+            <div id="userlogin">
+              <div id="userlogin_header">
+                <h5><span>Inicio de sesión</span></h5>
+              </div>
+              <form action="#">
+                <div id="field_username"> <strong><span>Usuario:</span></strong>
+                  <input type="text" />
+                </div>
+                <div id="field_password"> <strong><span>Contraseña:</span></strong>&nbsp;
+                  <input type="text" />
+                </div>
+                <div id="button_enter">
+                  <input type="image" src="userlogin_enter.gif" alt="Enter" class="button" />
+                </div>
+              </form>
+              <div id="userlogin_links">
+                <a href="#" id="register"><strong><span>Registrar >>></span></strong></a> <br />
+                <a href="#" id="notregister"><strong><span>Not Registered Yet?</span></strong></a>
+              </div>
+            </div>
+          </ul>&nbsp;&nbsp;&nbsp;
+       </section-2><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <section>
+          <h3>&nbsp;&nbsp;También lee</h3>
+          <ul>
+            <li>Lee acerca de Darth Vader 003</li>
+            <img src="PORTADA.png" alt="imagen" class="foto" >
+            <li><em> Lee acerca de Rex <a href="https://starwars.fandom.com/es/wiki/Rex" title="Star Wars wiki">Star Wars wiki</a></em>.</li>
+            <li><em>Lee acerca de Ahsoka Tano <a href="https://starwars.fandom.com/es/wiki/Ahsoka_Tano" title="Star Wars wiki">Star Wars wiki</a></em>.</li>
+            <li><em> Lee acerca de Obi-Wan Kenobi<a href="https://starwars.fandom.com/es/wiki/Obi-Wan_Kenobi" title="Star Wars wiki">Star Wars wiki</a></em>.</li>
+            <li><em> Lee acerca de Darth Vader <a href="https://starwars.fandom.com/es/wiki/Darth_Vader:_Lord_Oscuro_1" title="Star Wars wiki">Star Wars wiki</a></em>.</li>
+         </ul>
+         <h3>&nbsp;&nbsp;Nosotros</h3>
+         <ul>
+            <dt>Juan Diego Gonzalez Torres</dt><br>
+           <li>Estuduante Ing. Multimedia, Universidad de San Buenaventura</li>
+           <li>Amante de Star Wars</li>
+           <li>Modelador 3-D</li><br>
+           <dt>Valentina Ladino Camargo</dt><br>
+           <li>Estuduante Ing. Multimedia, Universidad de San Buenaventura</li>
+           <li>Amante de Star Wars</li>
+         </ul><br><br>
+       </section>
+       <section>
+        
+         <h6>&nbsp;</h6>
+         <ul>
+           <img src="DV2.png" alt="imagen" width="390px" >
+         </ul><br>
+       </section>
+     </div>
+    </div>
+   </div>
+   <div id="footer">
+     <p>Segundo parcial &ndash; grupo 4. </p>
+     <p> Juan Diego Gonzalez Torres | jdgonzalezt@academia.usbbog.edu.co | 300000037242  </p>
+     <p> Valentina Ladino Camargo | vladinoc@academia.usbbog.edu.co | 30000057907  </p>
+   </div>
+ </body>
+</html>

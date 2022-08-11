@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html>
+ <body>
+
+ 	 <meta charset="utf-8">
+     <h1>Calculo promedio</h1>
+     <form>
+         Primer Número:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Porcentaje:<br>
+         <input type="text" id="t1" placeholder="ingrese #1">
+         <input type="text" id="p1" placeholder="ingrese %1">
+         <br>
+         Segundo Número:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Porcentaje:<br>
+         <input type="text" id="t2" placeholder="ingrese #2">
+         <input type="text" id="p2" placeholder="ingrese %2">
+         <br>
+         Tercer Número:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Porcentaje:<br>
+         <input type="text" id="t3" placeholder="ingrese #3">
+         <input type="text" id="p3" placeholder="ingrese %3">
+         <br><br>
+         <input type="button" value="Calcular" onclick="Calcular();">
+     </form> 
+
+     <p id="promedio"></p>
+    
+ </body>
+ <script>
+      function Calcular() {
+      var vr1 = document.getElementById('t1').value;
+      var vr2 = document.getElementById('t2').value;
+      var vr3 = document.getElementById('t3').value;
+
+      var vr4 = document.getElementById('p1').value;
+      var vr5 = document.getElementById('p2').value;
+      var vr6 = document.getElementById('p3').value;
+
+      var p = ((parseFloat(vr1)*parseFloat(vr4))/100)+((parseFloat(vr2)*parseFloat(vr5))/100)+
+      ((parseFloat(vr3)*parseFloat(vr6))/100);
+      document.getElementById('promedio').innerHTML = p;
+      }
+      
+ </script>
+</html>

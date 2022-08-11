@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>
+		Funciones en JavaScript
+	</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 	<style type="text/css">
+
+ 		.foto
+ 		{
+ 			padding: 10px; 
+ 			margin: 10px; 
+ 			border: 2px solid black; 
+ 			float: right; 
+ 			width: 690px;
+
+ 		}
+
+    .foto2
+    {
+      padding: 10px; 
+      margin: 10px; 
+      border: 2px solid black; 
+      float: left; 
+      width: 690px;
+    }
+
+    .foto3
+    {
+      padding: 10px; 
+      margin: 10px;  
+      float: left; 
+      width: 690px;
+    }
+
+    .foto4
+    {
+      padding: 10px; 
+      margin: 10px;
+      border: 2px solid black;  
+      float: left; 
+      width: 690px;
+      height:230px;
+    }
+
+ 		.parrafo
+ 		{
+ 			font-family: Broadway;
+ 		}
+ 		.contenedor{
+   			width: 50%;
+   			display: inline-block;
+   			float: right;
+   			padding: 10px;
+   		}
+   	   	.xd{
+   			width: 50%;
+   			display: inline-block;
+   			float: left;
+   			padding: 10px;
+   		}
+   	   	.xd1{
+   			width: 50%;
+   			display: inline-block;
+   			float: left;
+   			padding: 10px;
+   		}
+
+      .jumbotron{
+
+        background-color: #059AEA;
+        color: #FFFFFF  ;
+        }
+      .bg-1{
+
+         background-color: ##FFFFFF;
+         color: #FFFFFF;
+        }
+      .bg-2{
+
+         background-color: #B2C2C7;
+         color: #FFFFFF;
+        }
+
+   		p{
+   			text-align: center;
+   			font-size : 40px;
+      }
+
+      h3,h2,h5{
+        text-align: center;
+        font-size : 18px;
+
+     }
+
+     h6{
+        text-align: center;
+        font-size : 16px;
+
+     }
+
+   		h1{
+   			text-align: center;
+   			color: black;
+     	    font-family: verdana;
+   		}
+   		
+
+           h2{
+     	        color: black;
+     	       font-family: verdana;
+     	       font-size: 300%
+     	       border: 2px solid powderblue;
+     	      }
+
+           h3{
+     	        color: black;
+     	        font-family: verdana;
+     	        font-size: 100%
+     	        border: 2px solid powderblue;
+     	      }
+
+            h4{
+              color: white;
+              font-family: verdana;
+              font-size: 100%
+              border: 2px solid powderblue;
+            }
+
+           p{   color: black;
+     	        font-family: verdana;
+     	        font-size: 150%
+            }
+
+ 	 	   * {margin:0; padding:0; border:0;}
+           html, body {
+                width: auto;
+                height: 100%;
+                font-family:Verdana, Geneva, sans-serif;
+                font-weight:bold;
+                background-color:#FFF;
+            }
+
+           nav{
+                position:relative;
+                background-color:#059AEA;
+                color:#FFF;
+                width:98%;
+                height:13%;
+                 margin: 0px auto;
+            }
+
+           header{
+               position:center;
+              background-color:#B2C2C7;
+              color:#FFF;
+              width:98%;
+              height:57%;
+              margin: 0px auto;
+            }
+     
+           section{
+              position:relative;
+              float:left;
+              background-color:#B2C2C7;
+              width:48%;
+              height:55%;
+              color:#FFF;
+            }
+            section-2{
+              position:relative;
+              float:right;
+              background-color:#B2C2C7;
+              width:48%;
+              height:55%;
+              color:#FFF;
+            }
+  
+          article{
+              background-color: #FFF;
+              width:97%;
+              height:88%;
+              color:#FFF;
+            }
+
+           aside{
+              position:relative;
+              background-color:#B2C2C7;
+              width:48%;
+              height:55%;
+              color:#FFF;
+              float:left;
+            }
+
+           footer{
+              position:relative; 
+              background-color:#059AEA;
+        
+             color:#FFF;
+             clear:both;
+            }
+           section,aside,article,header,nav{
+              -webkit-border-radius: 10px;
+              -moz-border-radius: 10px;
+              border-radius: 10px;
+              margin:1%;
+            }
+
+ 	</style>
+</head>
+<body>
+	<div class="jumbotron text-center">
+		<h1>Funciones en JavaScript</h1>
+		<h4>Integrantes:</h4>
+		<ul>
+			<li>Valentina Ladino Camargo</li>
+			<li>Santiago Sanches Jimenez</li>
+			<li>Juan Diego Gonzalez Torres</li>
+		</ul>
+	</div>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navega">
+					<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>                       
+      			</button>
+     		 	<a class="navbar-brand" href="NewPag.html">Menú principal</a>
+    		</div>
+   			 <div class="collapse navbar-collapse" id="myNavbar">
+     			 <ul class="nav navbar-nav navbar-right">
+        			<li><a href="mi_oagina_web.html">Introducción</a></li>
+        			<li><a href="#">Información</a></li>
+        			<li><a href="#">Ejemplos</a></li>
+              <li><a href="#">Referencias</a></li>
+
+     			 </ul>
+    		</div>
+  		</div>
+	</nav>
+	<p>
+    <div class="bg-2 text-center ">
+        <br>
+        <h1>Introducción </h1>
+        <br>
+          <section>
+               <article>
+                  <br><br>
+                  <h2>Muchas veces en la programación de una aplicación compleja se tienen que utilizar acciones o instrucciones repetitivas en el programa, lo cual hace muy tedioso para el usurario 
+                  el hecho de volver y copiar la misma línea de codoco una y otra vez en el desarrollo de su aplicación, por esto en programación se generaron las funciones, estas están hecha con el objetivo de hacer el trabajo más fácil del trabajador y la reducción del código.<br><br><br>
+                  Las funciones son la solución a todos estos problemas, tanto en JavaScript como en el resto de lenguajes de programación. Una función es un conjunto de instrucciones que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.</h2>
+                  <br><br><br>
+              </article>
+          </section>
+      </div>
+
+		<img class="foto" width="50" height="400" src="https://i1.wp.com/constantin-boulanger.fr/wp-content/uploads/2019/06/technology-57e2dd404c_1280.jpg?resize=930%2C620&ssl=1&is-pending-load=1">
+	</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br>
+
+  <div class="bg-2 text-center ">
+        <br>
+        <h1>Información </h1>
+        <br>
+	</div>
+
+  <p>
+    <div class="foto3 ">
+      <img src="https://s3-us-west-2.amazonaws.com/devcodepro/media/tutorials/funciones-en-javascript-t1.png" alt="imagen" class="foto2">
+
+      <img src="https://www.escuelajavascript.com/wp-content/uploads/2018/10/Diseño-sin-t%C3%ADtulo-13.png" width="50" height="400" alt="PlayStation5" class="foto2"><br>
+
+      <img src="f.jpg" width="50" height="400" alt="Bird" class="foto4">
+    </div><br>
+
+  <div class="bg-2 text-center ">
+          <section-2>
+               <article>
+                  <p> ¿Qué es una función?</p>
+                  <h2>Porción de código reusable, al ser reusable se evita el estar escribiendo el mismo código una y otra vez.</h2><br>
+                  <p>Llamado de funciones</p>
+                  <h2>
+                  Para llamar una función desde cualquier parte de nuestro programa, solo es necesario escribir el nombre de la función creada seguido de paréntesis( en caso de tener parámetros indicarlos dentro, separados por comas).</h2><br>
+                  <p> Definición de una función </p>
+                  <h2> La manera más fácil de definir una función es con la palabra reservada "function" al cuál se le añade un único nombre de función y se decide si quiere llevar o no parámetros, junto con un bloque de instrucción que va dentro de llaves. Existen dos maneras de definir una función en JavaScript. </h2><br>
+                 <p> Declaración de Función </p>
+                 <h2> Se le asigna un nombre a la función. Dicha función se debe cargar en el ámbito de la aplicación antes de la ejecución del código.</h2><br>
+                 <p> Expresión de Función </p>
+                 <h2> Se crea una función anónima y se le asigna a una variable. Esta función no se encuentra lista hasta que esa línea en particular sea evaluada durante la ejecución del código.</h2><br>
+                 <p> Argumentos y valores de retorno </p>
+                <h2> Las funciones más sencillas no necesitan ninguna información para producir sus resultados. Sin embargo, la mayoría de funciones de las aplicaciones reales deben acceder al valor de algunas variables para producir sus resultados. </h2>
+                <h2> La sentencia return finaliza la ejecución de la función y especifica un valor para ser devuelto a quien llama a la función.</h2>
+               <h2> Cuando una instrucción de retorno se llama en una función, se detiene la ejecución de esta. Si se especifica un valor dado, este se devuelve a quien llama a la función.</h2>
+               <h2> La instrucción de retorno se ve afectada por la inserción automática de punto y coma. No se permite el terminador de línea entre la palabra clave de retorno y la expresión.</h2>
+              <br>
+              </article>
+          </section-2>
+      </div>
+
+  </p><br><br><br><br><br>
+
+
+  <!-- aliniador -->
+  <div class="bg-1 text-center ">
+        <br>
+        <p2 style="color:white;">aqui no hay nada</p2>
+        <br>
+  </div>
+
+	<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+
+  <div class="bg-2 text-center ">
+    <h1><br> Ejemplos </h1><br>
+  </div>
+
+  
+  <div id="carrusel">
+    <a href="#" class="left-arrow"><img src="images/left-arrow.png" /></a>
+    <a href="#" class="right-arrow"><img src="images/right-arrow.png" /></a>
+    <div class="carrusel">
+        <div class="product" id="product_0">
+            <img src="gallery/01.jpg" width="195" height="100" />
+            <h5>Lorem ipsum 1</h5>
+            <p>165.00 €</p>
+        </div>
+        <div class="product" id="product_1">
+            <img src="gallery/02.jpg" width="195" height="100" />
+            <h5>Lorem ipsum 2</h5>
+            <p>100.00 €</p>
+        </div>
+        <div class="product" id="product_2">
+            <img src="gallery/03.jpg" width="195" height="100" />
+            <h5>Lorem ipsum 3</h5>
+            <p>250.00 €</p>
+        </div>
+        <div class="product" id="product_3">
+            <img src="gallery/01.jpg" width="195" height="100" />
+            <h5>Lorem ipsum 4</h5>
+            <p>75.00 €</p>
+        </div>
+        <div class="product" id="product_4">
+            <img src="gallery/02.jpg" width="195" height="100" />
+            <h5>Lorem ipsum 5</h5>
+            <p>65.00 €</p>
+        </div>
+        <div class="product" id="product_5">
+            <img src="gallery/03.jpg" width="195" height="100" />
+            <h5>Lorem ipsum 6</h5>
+            <p>40.00 €</p>
+        </div>
+    </div>
+</div>
+
+          
+      		<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+     			 <span class="sr-only">Regresa</span>
+       		</a>
+
+    	   <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      		<span class="sr-only">Siguiente</span>
+    	   </a>
+         
+	      <!-- texto-->
+
+         <!-- Referencias-->
+     <div class="bg-2 text-center ">
+    	  <br>
+    	  <h1>Referencias </h1>
+          <section>
+               <article>
+       	          <br>
+                  <ul>
+
+                    <li><h6><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions</a></h6></li>
+                    <li><h6><a href="https://www.falconmasters.com/web-design/menu-pegajoso-sticky-menu/">https://www.falconmasters.com/web-design/menu-pegajoso-sticky-menu/</a></h6></li>
+                    <li><h6><a href="https://uniwebsidad.com/libros/javascript/capitulo-4/funciones">https://uniwebsidad.com/libros/javascript/capitulo-4/funciones</a></h6></li>
+                    <li><h6><a href="https://devcode.la/tutoriales/funciones-en-javascript/">https://devcode.la/tutoriales/funciones-en-javascript/</a></h6></li>
+
+                  </ul>
+                  <br>
+              </article>
+          </section>
+
+          <section>
+               <article>
+                  <br>
+                  <ul>
+
+                    <li><h6><a href="https://lenguajejs.com/javascript/fundamentos/funciones/">https://lenguajejs.com/javascript/fundamentos/funciones/</a></h6></li>
+                    <li><h6><a href="http://www.codexexempla.org/curso/curso_4_2_e.php">http://www.codexexempla.org/curso/curso_4_2_e.php</a></h6></li>
+                    <li><h6><a href="https://es.javascript.info/function-expressions">https://es.javascript.info/function-expressions</a></h6></li>
+                    <li><h6><a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions">https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Functions</a></h6></li>
+
+                  </ul>
+                  <br>
+              </article>
+          </section>
+          <br>
+          <br>
+      </div>
+    
+     <!--imagen-->
+     <br><br><br><br><br>
+     <header>
+     	
+     	 <div class="container-flid bg-2 text-center">
+		     <img src="j1.jpg" class ="img-circle" alt="Bird">
+	      </div>
+     </header> 
+ 
+     <footer>
+         <br>
+
+	     <div id="container_footer"></div>  
+	     <p style="float: left;padding: 0;">&nbsp;</p>
+	      <div style="margin: 1em 0 0em 0; text-align: center;">
+	          <div style="text-align: center; font-size: 0.85em;">
+	      	      Integrantes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Correo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Codigo
+	 	      </div>
+	     </div>
+
+         <div style="margin: 1em 0 3em 0; text-align: center;">
+     	       <div style="text-align: center; font-size: 0.75em;">
+
+     	         <div>
+     	             Juan Diego Gonzalez Torres &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--%@##--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jdgonzalezt@academia.usbbog.edu.co  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--%@##--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 300000037242&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     	         </div>
+     	         <div>
+     	             Santiago Sánches Jiménez &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--%@##--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ssanchezj1@academia.usbbog.edu.co &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--%@##--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30000048675&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     	         </div>
+     	         <div>
+     	             Valentina Ladino Camargo &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--%@##--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; vladinoc@academia.usbbog.edu.co &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <!--%@##--> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30000057907 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+     	         </div>
+              </div>
+          </div>
+          <br>
+     </footer> 
+</body>
+</html>
