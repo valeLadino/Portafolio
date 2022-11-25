@@ -156,7 +156,7 @@ a:focus {
 
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
-  color: #f6b273;
+  color: #e7dbcf;
 }
 
 .tm-navbar.scroll .navbar-brand {
@@ -191,7 +191,7 @@ a:focus {
 
 
 .navbar-toggler-icon {
-  color: #f6b273;
+  color: #e6dfdf;
   padding-top: 6px;
 }
 
@@ -1002,7 +1002,7 @@ p {
   }
 }
 .banner {
-	background:url(img/ElAlba.gif) no-repeat 0% 0% / 100% 100%;
+	background:url(img/Secuencia_Sene2.gif) no-repeat 0% 0% / 100% 100%;
 	color:#ffffff;
 	text-align: center;
 	width: 100%;

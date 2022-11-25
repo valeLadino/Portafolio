@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Galeria</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="styleG.css"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css"/>
+<link rel="stylesheet" href="bootstrap.min.css" />
+<link rel="stylesheet" href="style.css" />
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+
+<!-- Font Google -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+      
+      
+
+  // carrusel fluides
+  var current = 0;
+  var imagenes = new Array();
+   
+  
+  $(document).ready(function() {
+      var numImages = 6;
+      if (numImages <= 3) {
+          $('.right-arrow').css('display', 'none');
+          $('.left-arrow').css('display', 'none');
+      }
+   
+      $('.left-arrow').on('click',function() {
+          if (current > 0) {
+              current = current - 1;
+          } else {
+              current = numImages - 3;
+          }
+   
+          $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+   
+          return false;
+      });
+   
+      $('.left-arrow').on('hover', function() {
+          $(this).css('opacity','0.5');
+      }, function() {
+          $(this).css('opacity','1');
+      });
+   
+      $('.right-arrow').on('hover', function() {
+          $(this).css('opacity','0.5');
+      }, function() {
+          $(this).css('opacity','1');
+      });
+   
+      $('.right-arrow').on('click', function() {
+          if (numImages > current + 3) {
+              current = current+1;
+          } else {
+              current = 0;
+          }
+   
+          $(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+   
+          return false;
+      }); 
+   });
+      // google
+   "use strict"
+     var map;
+     function initMap(){
+         map= new google.maps.Map( document.getElementById("map"),{
+             center: {
+                 lat: -34.397,
+                 lng: 150.644,
+
+                 },
+             zoom: 0,
+         });
+     }
+  </script>
+
+</head>
+
+<body>
+  <div id="map"></div>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=&v=weekly" async></script>
+    
+     <!-- Navegacion -->
+     <nav class="navbar navbar-expand-md tm-navbar">              
+      <div class="container">   
+        <div class="tm-next">
+            <a href="index.html" class="navbar-brand">Inicio</a>
+        </div>             
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fas fa-bars navbar-toggler-icon"></i>
+          
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+           <!--  <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#introduction">Mis trabajos</a>
+            </li> -->
+            <!-- <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#work">Mis trabajos</a>
+            </li> -->
+            <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#contact">Contacto</a>
+            </li>                    
+          </ul>
+        </div>        
+      </div>
+    </nav>
+
+    <!-- menu -->
+     <!-- Banner Image -->
+     <section id="hero2"  alt="Image"  class="text-white tm-font-big tm-parallax">
+    <div class="banner2 text-center" data-scroll-index='0'>
+      
+        <div class="banner2-overlay">
+          <div class="container">
+            <h2 class="tm-hero2-title">Trabajos</h2>
+            <br>
+             </div>
+        </div>
+    
+    </div>
+  </section> 
+  <br><br><br>
+
+
+<!-- Gallery -->
+<div class="portfolio section-padding" data-scroll-index='3'>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 section-title text-center">
+        <h3>Este es un listado de mis proyectos </h3>
+        <span class="section-title-line"></span> </div>
+      <div class="filtering text-center mb-30">
+        <button type="button" data-filter='*' class="active">Todo</button>
+        <button type="button" data-filter='.threejs'>Modelado, texturizado e iluminación en three js</button>
+        <button type="button" data-filter='.personajes'>Personajes 3D</button>
+        <button type="button" data-filter='.Escenarios'>Escenarios 3D</button>
+        <button type="button" data-filter='.Texturizado'>Texturizado y render en Autodesk Maya</button>
+        <button type="button" data-filter='.Diseño'>Diseño</button>
+        <button type="button" data-filter='.Postproducción'>Postproducción</button>
+        <button type="button" data-filter='.Animación'>Animación 2D y 3D</button>
+        <button type="button" data-filter='.videojuegos'>Desarrollo de videojuegos</button>
+
+      </div>
+      <div class="gallery no-padding col-lg-12 col-sm-12">
+        <div class="col-lg-4 col-sm-6 Texturizado no-padding">
+          <div class="item-img"> <a class="single-image" href="img/base espacial.jpg"></a>
+            <div class="part-img"> <img src="img/base espacial.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Este fue el primer trabajo con luces y texturas en Autodesk Maya.
+                </h4>
+                <h6>Nave espacial</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 Texturizado no-padding">
+          <div class="item-img"> <a class="single-image" href="img/Cuarto Iluminacion- final.jpg"></a>
+            <div class="part-img"> <img src="img/Cuarto Iluminacion- final.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Este fue el segundo trabajo con luces y texturas en Autodesk Maya.</h4>
+                <h6>Cuarto infantil</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 Texturizado no-padding">
+          <div class="item-img"> <a class="single-image" href="img/museo final.jpg"></a>
+            <div class="part-img"> <img src="img/museo final.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Este es el primer trabajo con luces y texturas en Autodesk Maya con el render Arnold.
+                </h4>
+                <h6>Museo</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 threejs no-padding">
+          <div class="item-img"> <a class="single-image" href="img/MesaBillar.JPG"></a>
+            <div class="part-img"> <img src="img/MesaBillar.JPG" alt="image">
+              <div class="overlay-img">
+                <h4><br>Esta es la escena de un mini bar, modelo lowpoly, texturizado e iluminado en three js.</h4>
+                <h6>Mini bar</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 threejs no-padding">
+          <div class="item-img"> <a class="single-image" href="img/Navidad.JPG"></a>
+            <div class="part-img"> <img src="img/Navidad.JPG" alt="image">
+              <div class="overlay-img">
+                <h4><br>Esta escena es una sala navideña, modelo lowpoly, texturizado e iluminado en three js.</h4>
+                <h6>Sala navideña</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 threejs no-padding">
+          <div class="item-img"> <a class="single-image" href="img/puzzle.JPG"></a>
+            <div class="part-img"> <img src="img/Puzzle.JPG" alt="image">
+              <div class="overlay-img">
+                <h4><br>Esta escena es un escape run con puzzles, modelo lowpoly, texturizado e iluminado en three js.</h4>
+                <h6>Escape run</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 personajes no-padding">
+          <div class="item-img"> <a href="https://sketchfab.com/3d-models/ahsoka-tano-92ed2109f51745ee9242799a5a5f54bd"></a>
+            <div class="part-img"> <img src="img/Ahsoka.JPG" alt="image">
+              <div class="overlay-img">
+                <h4><br>Modelo 3D hecho en Autodesk Maya, con el cual gané el concurso de modelado de personaje 3D del Media
+                  Show, concurso de la facultad de ingeniería
+                  multimedia en la universidad San Buenaventura.</h4>
+                <h6>Ahsoka Tano</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 personajes no-padding">
+          <div class="item-img"> <a class="single-image" href="img/RenderDragonF.jpg"></a>
+            <div class="part-img"> <img src="img/RenderDragonF.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Personaje diseñado, modelado y texturizado para la animación 3D Un mundo con dragones. </h4>
+                <h6>Dragón</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 personajes no-padding">
+          <div class="item-img"> <a class="single-image" href="img/RenderFredoFinal.jpg"></a>
+            <div class="part-img"> <img src="img/RenderFredoFinal.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Personaje de la serie Las sombrías aventuras de Billy y Mandy el cual fue modelado y texturizado.</h4>
+                <h6>Fredo Godofredo</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 Escenarios no-padding">
+          <div class="item-img"> <a class="single-image" href="img/Scene1.jpg"></a>
+            <div class="part-img"> <img src="img/Scene1.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Esta escena se enfoca en el hiperrealismo y la ciencia ficción, fue hecha con
+                  texturas PBR y substance, con un renderizado en Autodesk Maya con el render Arnold.</h4>
+                <h6>Una ciudad fantasmagórica</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 Escenarios no-padding">
+          <div class="item-img"> <a class="single-image" href="img/Secuencia_Sene2.gif"></a>
+            <div class="part-img"> <img src="img/Secuencia_Sene2.gif" alt="image">
+              <div class="overlay-img">
+                <h4><br>Esta escena se enfoca en el modelado low poly, con texturas caricaturescas, con un toque de fantasía y de ciencia ficción, fue hecha con
+                  texturas PBR y substance, con un renderizado en Autodesk Maya con el render Arnold.</h4>
+                <h6>Una ciudad abismal</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 Diseño no-padding">
+          <div class="item-img"> <a class="single-image" href="img/afiche.jpg"></a>
+            <div class="part-img"> <img src="img/afiche.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Fui directora de postproducción del videoclip el alba.</h4>
+                <h6>Video clip el alba</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 Postproducción no-padding">
+          <div class="item-img"> <a href="https://www.youtube.com/watch?v=EXz5xQPupnA"></a>
+            <div class="part-img"> <img src="img/ElAlba_1.gif" alt="image">
+              <div class="overlay-img">
+                <h4><br>Diseñé el poster para la producción del video clip el alba, 
+                  una canción de la banda la cordillera.</h4>
+                <h6>Poster video clip el alba</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-sm-6 Postproducción no-padding">
+          <div class="item-img"> <a href="https://www.youtube.com/watch?v=avC4QtwngYc&list=LL&index=1&t=12s"></a>
+            <div class="part-img"> <img src="img/USBradio.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Fui la directora y la encargada de la postproducción del pódcast Radio Estudiantil USB Bogotá (Acuerdo Escazú).</h4>
+                <h6>Radio Estudiantil USB Bogotá (Acuerdo Escazú)</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+       <!--  <div class="col-lg-4 col-sm-6 Animación no-padding">
+          <div class="item-img"> <a class="single-image" href="img/EmpanaditasFinal.gif"></a>
+            <div class="part-img"> <img src="img/EmpanaditasFinal.gif" alt="image">
+              <div class="overlay-img">
+                <h4><br>Esta animación 2D consta de tracking a partir del movimiento, fue hecha en adobe after effects y adobe premiere.</h4>
+                <h6>Empanadas</h6>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="col-lg-4 col-sm-6 Animación no-padding">
+          <div class="item-img"> <a href="https://www.youtube.com/watch?v=3BGnisRDZVM&t=1s"></a>
+            <div class="part-img"> <img src="img/fafi.JPG" alt="image">
+              <div class="overlay-img">
+                <h4><br>Animación 2D hecha en adobe after effects y adobe premiere</h4>
+                <h6>Fafi</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 Animación no-padding">
+          <div class="item-img"> <a href="https://www.youtube.com/watch?v=hqgieW8WH-g"></a>
+            <div class="part-img"> <img src="img/UnMundoConDragones.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>Animación 3D en proceso, este es un adelanto. Desempeño los roles de arte, modelado, texturizado, parte de la animación, parte del renderizado y postproducción.</h4>
+                <h6>Un mundo con dragones</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 videojuegos no-padding">
+          <div class="item-img"> <a href="https://valbriu.itch.io/junimo-adventure"></a>
+            <div class="part-img"> <img src="img/CoverJunimoAdventure.jpg" alt="image">
+              <div class="overlay-img">
+                <h4><br>videojuego 2D desarrollado en phaser, es un videojuego de plataformas llamado Junimo Adventure.</h4>
+                <h6>Junimo Adventure</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Gallery -->
+<!-- Testimonials -->
+<!-- <div class="testimonials">
+  <div class="testimonials-overlay section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <div class="owl-carousel owl-theme">
+            <div class="testimonial-item text-center">
+              <div class="icon"> <i class="fas fa-comments"></i> </div>
+              <p class="m-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="testimonial-author text-center">
+                <h5>Rup Jakhar</h5>
+                <h6>Web Desinger</h6>
+              </div>
+            </div>
+            <div class="testimonial-item text-center">
+              <div class="icon"> <i class="fas fa-comments"></i> </div>
+              <p class="m-auto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <div class="testimonial-author text-center">
+                <h5>Yogesh Singh</h5>
+                <h6>Web Desinger</h6>
+              </div>
+            </div>
+            <div class="testimonial-item text-center">
+              <div class="icon"> <i class="fas fa-comments"></i> </div>
+              <p class="m-auto">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div class="testimonial-author text-center">
+                <h5>Vivek Singh</h5>
+                <h6>Web Desinger</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- Contacto -->
+<br><br>
+<div class="jumbotron2b text-center">
+  <section id="contact" class="tm-section-pad-top tm-parallax-2">
+    <div class="container tm-container-contact">
+      <div class="row">
+          <div class="col-12">
+              <h2 class="mb-4 tm-section-title">Contacto</h2>
+              <div class="mb-5 tm-underline">
+                <div class="tm-underline-inner"></div>
+              </div>
+              <p class="mb-5">
+                Puedes contactarme por estas redes sociales.
+              </p>
+          </div>
+          <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+              <img src="img/tel.png" width="150" height="100"  title="Teléfono"></a> &nbsp; &nbsp;
+                <span class="mb-0">+(57) 3058128973</span>
+            </a>              
+          </div>
+          <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+            <a href="https://www.instagram.com/vale__ladino/?hl=es-la" >
+              <img src="img/instagram.png" width="100" height="100"  title="vale_ladino"></a> &nbsp; &nbsp;
+                <span class="mb-0">Instagram</span>
+            </a>              
+          </div>
+          <div class="col-sm-12 col-md-6 d-flex align-items-center tm-contact-item">
+              <img src="img/correo.png" width="120" height="90"  title="Correo"></a>&nbsp; &nbsp;
+                <span class="mb-0">valentinalc@outlook.es</span>
+            </a>              
+          </div>
+      </div>
+    </div>
+    <footer class="text-center small tm-footer">
+        <p class="mb-0">
+           2021 Valentina Ladino Camargo
+        </p>
+      </footer>
+  </section>
+  </div>
+<!-- End Testimonials --> 
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> 
+<!-- owl carousel js --> 
+<script src="js/owl.carousel.min.js"></script> 
+<!-- magnific-popup --> 
+<script src="js/jquery.fancybox.min.js"></script> 
+
+<!-- scrollIt js --> 
+<script src="js/scrollIt.min.js"></script> 
+
+<!-- isotope.pkgd.min js --> 
+<script src="js/isotope.pkgd.min.js"></script> 
+
+<script>
+  $(window).on("scroll",function () {
+
+      var bodyScroll = $(window).scrollTop(),
+          navbar = $(".navbar");
+
+      if(bodyScroll > 130){
+
+          navbar.addClass("nav-scroll");
+          $('.navbar-logo img').attr('src','images/logo-black.png');
+
+
+      }else{
+
+          navbar.removeClass("nav-scroll");
+          $('.navbar-logo img').attr('src','images/logo-white.png');
+
+      }
+
+  });
+
+  $(window).on("load",function (){
+
+
+
+var bodyScroll = $(window).scrollTop(),
+navbar = $(".navbar");
+
+if(bodyScroll > 130){
+
+navbar.addClass("nav-scroll");
+$('.navbar-logo img').attr('src','images/logo-black.png');
+
+
+}else{
+
+navbar.removeClass("nav-scroll");
+$('.navbar-logo img').attr('src','images/logo-white.png');
+
+}
+
+/* smooth scroll
+  -------------------------------------------------------*/
+  $.scrollIt({
+
+easing: 'swing',      // the easing function for animation
+scrollTime: 900,       // how long (in ms) the animation takes
+activeClass: 'active', // class given to the active nav element
+onPageChange: null,    // function(pageIndex) that is called when page is changed
+topOffset: -63
+});
+
+/* isotope
+-------------------------------------------------------*/
+var $gallery = $('.gallery').isotope({});
+$('.gallery').isotope({
+
+    // options
+    itemSelector: '.item-img',
+    transitionDuration: '0.5s',
+
+});
+
+
+$(".gallery .single-image").fancybox({
+  'transitionIn'  : 'elastic',
+  'transitionOut' : 'elastic',
+  'speedIn'   : 600,
+  'speedOut'    : 200,
+  'overlayShow' : false
+});
+
+
+/* filter items on button click
+-------------------------------------------------------*/
+$('.filtering').on( 'click', 'button', function() {
+
+    var filterValue = $(this).attr('data-filter');
+
+    $gallery.isotope({ filter: filterValue });
+
+    });
+
+$('.filtering').on( 'click', 'button', function() {
+
+    $(this).addClass('active').siblings().removeClass('active');
+
+});
+
+})
+
+$(function () {
+$( ".cover-bg" ).each(function() {
+    var attr = $(this).attr('data-image-src');
+
+    if (typeof attr !== typeof undefined && attr !== false) {
+      $(this).css('background-image', 'url('+attr+')');
+    }
+
+  });
+
+  /* sections background color from data background
+  -------------------------------------------------------*/
+  $("[data-background-color]").each(function() {
+      $(this).css("background-color", $(this).attr("data-background-color")  );
+  });
+
+
+/* Owl Caroursel testimonial
+  -------------------------------------------------------*/
+  
+  $('.testimonials .owl-carousel').owlCarousel({
+    loop:true,
+    autoplay:true,
+    items:1,
+    margin:30,
+    dots: true,
+    nav: false,
+    
+  });
+
+});
+// fluides 
+function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+          
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        $(window).scroll(function(){
+          var firstTop = $object.offset().top,
+              pos = $(window).scrollTop(),
+              yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+          var bg_css = 'center ' + yPos + 'px';
+
+          $object.css({"background-position" : bg_css });
+        });
+      };
+      
+      $(function(){
+        // portada fluida
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#contact"), 0.80);   
+        
+       
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // scroll
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // menu movil
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+    
+        $('#tmNav').singlePageNav();        
+        
+   
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 400, function(){
+              window.location.hash = hash;
+            });
+          } 
+        });
+
+      
+        $('.tm-gallery').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+       
+      });
+
+</script>
+</body>
+</html>
