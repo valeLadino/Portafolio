@@ -33,7 +33,7 @@ img {
 	padding-bottom: 80px;
 }
 .section-title h3 {
-	color: #ea7405;
+	color: #ab2f52;
 	text-transform: uppercase;
 	font-weight: 300;
 	margin-bottom: 22px;
@@ -51,7 +51,7 @@ img {
 	width: 175px;
 }
 .section-title-line:after {
-	background: #ea7405;
+	background: #ab2f52;
 	bottom: -1px;
 	content: "";
 	height: 2px;
@@ -64,10 +64,6 @@ img {
 
 .mb-30 {
 	margin-bottom: 30px !important;
-}
-.mb-31 {
-	margin-bottom: 30px !important;
-	line-height: 3.4;
 }
 .mb-50 {
 	margin-bottom: 50px !important;
@@ -154,7 +150,7 @@ img {
 	border: 0;
 }
 .portfolio .filtering .active {
-	background-color: #ea7405;
+	background-color: #ab2f52;
 	color: #fff;
 	border-radius: 28px;
 	-webkit-box-shadow: 0px 10px 30px -4px rgba(0, 0, 0, 0.2);
@@ -234,7 +230,7 @@ img {
 }
 .portfolio .gallery .item-img .part-img .overlay-img h4:before {
 	content: '';
-	background: rgb(255, 136, 57);
+	background: rgb(207, 92, 16);
 	bottom: 0;
 	position: absolute;
 	right: 100%;
@@ -258,7 +254,7 @@ img {
 }
 .portfolio .gallery .item-img .part-img .overlay-img h6::before {
 	content: '';
-	background: rgb(255, 136, 57);
+	background: rgb(255, 136, 57);;
 	bottom: 0;
 	right: auto;
 	position: absolute;
@@ -293,7 +289,7 @@ img {
 	right: -100%;
 }
 .portfolio .gallery .item-img:hover .overlay-img h6 {
-	color: rgb(255, 136, 57);
+	color: white;
 }
 .portfolio .gallery .item-img:hover .overlay-img h6:before {
 	left: -100%;
@@ -383,8 +379,25 @@ img {
 	padding:7px 0px;
 }
 @media all and (max-width:991px) {
-
-
+.navbar .navbar-collapse {
+	overflow: auto;
+	background: rgba(0, 0, 0, 0.72);
+	color: #fff !important;
+	text-align: center;
+	padding: 10px 0;
+}
+.nav-scroll .navbar-collapse {
+	background: #fff !important;
+}
+}
+@media all and (max-width:768px) {
+.nav-scroll .navbar-brand img, .navbar-brand img{
+	transform: scale(0.75) !important;
+	-webkit-transform: scale(0.75) !important;
+}
+.banner h1 {
+	font-size: 30px;
+}
 .section-title p {
 	width: 100%;
 }
@@ -408,5 +421,7 @@ img {
 	font-size: 10px;
 	padding: 10px 15px;
 }
-
+.banner-overlay {
+	padding: 150px 0px 100px;
+}
 }

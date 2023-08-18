@@ -96,6 +96,7 @@ a:focus {
 /* Texto principal */
 
 .tm-text-primary {
+  text-align: center;
   color: #ea7405;
 }
 
@@ -250,13 +251,8 @@ a:focus {
 }
 
 .tm-hero-title {
-  color: #ea7405;
-  font-size: 3.2rem;
-  text-shadow: 3px 3px 3px rgb(0, 0, 0);
-}
-.tm-hero2-title {
   color: #e4e4e4;
-  font-size: 3.2rem;
+  font-size: 4.2rem;
   text-shadow: 3px 3px 3px rgb(0, 0, 0);
 }
 
@@ -342,7 +338,7 @@ a:focus {
 }
 
 .tm-hero2-title {
-  font-size: 3.2rem;
+  font-size: 5rem;
   text-shadow: 3px 3px 3px #333;
 }
 
@@ -394,8 +390,13 @@ a:focus {
 }
 
 .tm-intro-text {
+  text-align: center;
   font-size: 1.2rem;
   line-height: 1.4;
+}
+
+.tm-p-text {
+  text-align: center;
 }
 
 .tm-icon {
@@ -768,10 +769,10 @@ figure.effect-honey2:hover h2 i {
   color: white;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 850px;
+  min-height: 50px;
   position: relative;
   padding-bottom: 50px;
-  padding-top: 160px;
+  padding-top: 100px;
 }
 
 .tm-underline {
