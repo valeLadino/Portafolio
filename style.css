@@ -22,6 +22,7 @@ h5{
 }
 
 a {
+  color: #ea7405;
   transition: all 0.3s ease;
 }
 
@@ -51,6 +52,14 @@ a {
 
   background-color: #ea7405;
   color: #FFFFFF	;
+}
+
+.jumbotronF{
+
+  background-color: #c05d00;
+  color: #FFFFFF	;
+  /* height: 10px; */
+
 }
 
 .jumbotron3{
@@ -338,6 +347,7 @@ a:focus {
 }
 
 .tm-hero2-title {
+  /* color: #ea7405; */
   font-size: 5rem;
   text-shadow: 3px 3px 3px #333;
 }
@@ -387,6 +397,13 @@ a:focus {
 .tm-section-title {
   font-size: 2.6rem;
   font-weight: normal;
+  color: #ea7405;
+}
+
+.tm-section-title2 {
+  font-size: 2.6rem;
+  font-weight: normal;
+  color: white;
 }
 
 .tm-intro-text {
@@ -1066,4 +1083,37 @@ p {
 .banner2-overlay {
 	padding: 150px 0px 100px;
 }
+
+.banner3 {
+	background:url(img/BanerP.jpg) no-repeat 0% 0% / 100% 100%;
+	color:#ffffff;
+	text-align: center;
+	width: 100%;
+}
+.banner3-overlay {
+	/* background:linear-gradient(to bottom, rgba(255, 115, 0, 0.82) 0%, #570263 100%); */
+	padding:220px 0px 170px;
+}
+.banner3 h1 {
+	color:#ffffff;
+}
+.banner3 p {
+	margin:15px auto 15px;
+	max-width: 670px
+}
+.banner3-btn {
+	background: #ab2f52;
+	padding: 12px 45px;
+	font-size: 15px;
+	border-radius: 30px;
+	margin-top: 30px;
+}
+.banner3-btn:hover {
+	background: #ffffff;
+	color:#ab2f52;
+}
+.banner3-overlay {
+	padding: 150px 0px 100px;
+}
+
 
